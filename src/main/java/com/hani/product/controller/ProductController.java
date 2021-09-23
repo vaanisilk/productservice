@@ -29,11 +29,13 @@ public class ProductController {
 	
 	@PostMapping
 	public Product saveProduct(@RequestBody Product product) {
+		log.info("Save Product ... ");
 		return productService.saveProduct(product) ;
 	}
 	
 	@GetMapping("/all")
 	public List<Product> getProducts() {
+		log.info("getProducts Product ... ");
 		return productService.getProducts() ;
 	}
 	
